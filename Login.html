@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+          background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+      
+    <style>
+        form {
+          width: 500px;
+          height: 200px;
+          margin: 200px auto;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          border: 4px solid gray;
+          border-radius: 20px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+          width: 60%;
+          text-align: center;
+          padding: 10px;
+          margin-top: 20px;
+          margin-bottom: 15px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: none;
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        button[type="button"] {
+          width: 60%;
+          padding: 10px;
+          text-align: center;
+          background-color: green;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+
+    <form>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="button" onclick="login()">Login</button>
+      </form>
+
+      <script>
+        function login() {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          
+          if (username === "admin" && password === "password") {
+            alert("登入成功;Login successful");
+            window.location.href="https://ns-snow.github.io/"
+          } else {
+            alert("錯誤密碼或無效帳號名稱;Incorrect username or password");
+          }
+        }
+        </script>
+</body>
+</html>
+
